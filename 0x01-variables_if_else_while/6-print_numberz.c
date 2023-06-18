@@ -15,9 +15,9 @@ int main(void)
 
 	while (x <= '9')
 	{
-		printf("%i", x - 48);
+		putchar(x);
 		x++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
