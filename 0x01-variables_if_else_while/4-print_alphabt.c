@@ -16,7 +16,10 @@ int main(void)
 	while (ch <= 'z')
 	{
 		if (ch == 'q' || ch == 'e')
+		{
+			ch++;
 			continue;
+		}
 		putchar(ch);
 		ch++;
 	}
