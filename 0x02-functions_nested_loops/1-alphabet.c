@@ -1,21 +1,14 @@
 #include "main.h"
 /**
- * main - Entry point
+ * print_alphabet - Used to print the entire alphabet
  *
- * Description: 'the program's description'
- *
- *
- * Return: Always 0 (Success)
+ * Return: Void
  */
-
 void print_alphabet(void)
-{	char x = 'a';
+{
+	int i = 'a';
 
-	while (x <= 'z')
-	{
-		_putchar(x);
-		x++;
-	}
-	_putchar("\n");
-	return (0);
+	while (i <= 'z')
+		_putchar(i++);
+	_putchar('\n');
 }
