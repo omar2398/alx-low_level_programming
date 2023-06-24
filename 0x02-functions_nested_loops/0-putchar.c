@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	char omar[] = "_putchar";
+	char omar[9] = "_putchar";
 
 	for (int i = 0; i < 8; i++)
 	{
