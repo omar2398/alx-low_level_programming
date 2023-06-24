@@ -1,23 +1,19 @@
 #include "main.h"
-
 /**
- * main - Entry point
- *
- * Description: 'the program's description'
- *
+ * main - Entry Function
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char omar[9] = "_putchar";
+	char word[9] = "_putchar";
+	int i = 0;
 
-	for (int i = 0; i < 8; i++)
+	while (i < 8)
 	{
-		_putchar(omar[i]);
+		_putchar(word[i]);
+		i++;
 	}
-	_putchar("\n");
-
+	_putchar('\n');
 	return (0);
-}
+} 
