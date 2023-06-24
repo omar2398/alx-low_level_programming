@@ -15,7 +15,7 @@ int main(void)
 
 	for (int i = 0; i < 8; i++)
 	{
-		_putchar(omar[i];)
+		_putchar(omar[i]);
 	}
 	_putchar("\n");
 
