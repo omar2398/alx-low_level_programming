@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * _abs - show the sign of numbers  .
  * @n : check the input
  * Return: int
  */
-int int _abs(int n)
+
+int _abs(int n)
 {
 	if (n >= 0)
 	{
