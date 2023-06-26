@@ -1,16 +1,18 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * print_numbers - is an internal function
- * _putchar - terturn function
- * Description: 'the program's description'
- * Return: Always 0 (Success)
+ * print_numbers - print the numbers from 0 to 9
+ * followed by a new line.
+ *
+ * Return: Void.
  */
-
 void print_numbers(void)
 {
-	for (int i = '0'; i <= '9'; i++)
-		_putchar(i);
+	char a = '0';
+
+	while (a <= '9')
+	{
+		_putchar(a);
+		a++;
+	}
 	_putchar('\n');
 }
