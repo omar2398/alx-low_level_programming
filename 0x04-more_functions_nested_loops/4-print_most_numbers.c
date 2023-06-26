@@ -11,10 +11,13 @@ void print_numbers(void)
 
 	while (a <= '9')
 	{
+		if (a == '2' || a == '4')
+		{
+			continue;
+			a++;
+		}
 		_putchar(a);
 		a++;
-		if (a == '2' || a == '4')
-			continue;
 	}
 	_putchar('\n');
 }
