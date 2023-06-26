@@ -2,14 +2,14 @@
 #include "main.h"
 
 /**
- * _isdigit - is an internal function
+ * _isupper - is an internal function
  * Description: 'the program's description'
  * @c : input
  *
  * Return: Always 0 (Success)
  */
 
-int _isdigit(int c);
+int _isupper(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
