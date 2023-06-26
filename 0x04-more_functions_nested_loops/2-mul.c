@@ -4,8 +4,8 @@
 /**
  * mul - is an internal function
  * Description: 'the program's description'
- * @a : input1
- * @b : input2
+ * @a : input 1
+ * @b : input 2
  * Return: Always 0 (Success)
  */
 
