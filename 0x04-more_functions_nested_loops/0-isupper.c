@@ -2,21 +2,17 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
+ * _isupper - is an internal function
  * Description: 'the program's description'
- *
+ * @c : input
  *
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int _isupper(int c)
 {
-	char c;
-
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
-	return (0);
+	if (c >= 65 && c <= 90)
+		return (1);
+	else
+		return (0);
 }
