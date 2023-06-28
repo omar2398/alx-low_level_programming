@@ -12,9 +12,15 @@
 
 void print_rev(char *s)
 {
-	int len = (strlen(s));
+	int length = 0;
 
-	for (int i = len - 1; i >= 0; i--)
-		printf("%c", s[i]);
-	printf("\n");
+	while (*(s + length) != '\0')
+	{
+		length++;
+	}
+	while (--length >= 0)
+	{
+		_putchar(*(s + length));
+	}
+	_putchar('\n');
 }
