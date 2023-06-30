@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * _strncat - Entry point
  * @dest : input
@@ -27,7 +27,7 @@ char *_strncat(char *dest, char *src, int n);
 		if (n == j)
 			break;
 		j++;
-		i++;
+	i++;
 	}
 
 	dest[i] = '\0';
