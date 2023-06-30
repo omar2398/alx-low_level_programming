@@ -1,16 +1,14 @@
 #include "main.h"
-/**
- * _strncat - Entry point
- * @dest : input
- * @src : input 2
- * @n : input3
- * Description: 'the program's description'
- *
- *
- * Return: Always 0 (Success)
- */
 
-char *_strncat(char *dest, char *src, int n);
+/**
+ * _strncat - concatenates n bytes from a string to another
+ * @dest: destination string
+ * @src: source string
+ * @n: number of bytes of str to concatenate
+ *
+ * Return: a pointer to the resulting string dest
+ */
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -23,8 +21,8 @@ char *_strncat(char *dest, char *src, int n);
 	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
-		j++;
 		i++;
+		j++;
 	}
 
 	dest[i] = '\0';
