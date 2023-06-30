@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * _strcat - Entry point
@@ -13,6 +12,12 @@
 
 char *_strcat(char *dest, char *src)
 {
-	dest = strcat(dest, src);
+	int c1, c2 = 0;
+
+	while (dest[c1])
+		c1++;
+	for (c2 = 0; src[c2]; c2++)
+		dest[c1++] = src[c2];
 	return (dest);
+
 }
