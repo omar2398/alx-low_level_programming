@@ -1,28 +1,25 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * _strpbrk - a function that gets the length of a prefix substring.
- * @s: the main string.
- * @accept: The accepted string.
+ * _strpbrk - function that searches a string for any of a set of bytes..
+ *@s: first value -char
+ *@accept: second value - char
  *
- * Return: Returns the number of bytes in the initial segment of s which
- * consist only of bytes from accept
+ * Return: char with result
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
-	int j;
-	unsigned int number = 0;
+	int j = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		int found = 0;
-	for (j = 0; accept[j] != '\0'; j++)
-	{
-	if (s[i] == accept[j])
-	{
-		return (s + i);
+		while (accept[j] != '\0')
+		{
+			if (*s == accept[j])
+				return (s);
+			j++;
+		}
+		j = 0;
+		s++;
 	}
-	}
-	}
-	return (NULL);
+	return ('\0');
 }
