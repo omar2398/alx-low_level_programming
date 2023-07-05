@@ -1,35 +1,43 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * _strstr - function that searches a string for any of a set of bytes..
- *@haystack : first value -char
- *@needle : second value - char
+ * _strstr - function that locates a substring.
+ *@haystack: first value -char
+ *@needle: second value - char
  *
  * Return: char with result
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
-	int k = 0;
+	int count = 0, a = 0, k, j = 0, l, i = 0;
+	char *p;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (needle[count] != '\0')
 	{
-		for (j = 0; needle[j] != '\0'; j++)
+		count++;
+	}
+	while (haystack[i] != '\0')
+	{
+		i++;
+			}
+	if (count == 0)
+		return (haystack);
+	while (haystack[j] != '\0')
+	{
+		if (haystack[j] == needle[0])
 		{
-			if (haystack[i] ==  needle[j])
+			p = &haystack[j];
+			l = j;
+			a = 0;
+			for (k = 0; k < count; k++)
 			{
-				k = i;
-				while (needle[j] != '\0')
-				{
-					i++;
-					j++;
-					if (haystack[i] !=  needle[j])
-					{
-						return (NULL);
-					}
-				}
+				if (haystack[l] == needle[k])
+					a++;
+				l++;
 			}
 		}
+		if (a == count)
+			return (p);
+		j++;
 	}
-	return (*(haystack + k));
+	return ('\0');
 }
