@@ -1,9 +1,12 @@
 #include "main.h"
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- * @n: the number.
+ * sqrt2 - Makes possible to evaluate from 1 to n
+ * @a: same number as n
+ * @b: number that iterates from 1 to n
  *
- * Return: the natural square of n, -1 if there is no natural roots.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ *
  */
 
 int sqrt2(int a, int b)
