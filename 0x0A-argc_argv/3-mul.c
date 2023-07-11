@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	if (argv[1] != '\0' && argv[2] != '\0')
+	if (argc >= 3)
 	{
 		printf("%d\n", argv[1] * argv[2]);
 	}
