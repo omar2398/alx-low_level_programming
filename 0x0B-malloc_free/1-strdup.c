@@ -12,7 +12,7 @@
  * Return: Always 0 (Success)
  */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	int l;
 	char *ptr;
