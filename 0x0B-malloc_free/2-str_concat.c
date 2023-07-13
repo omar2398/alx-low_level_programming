@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 	int all;
-	char *str;
+	char *ptr;
 
 	all = strlen(s1) + strlen(s2);
 	l = strlen(s1);
