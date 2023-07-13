@@ -13,7 +13,7 @@
  * Return: Always 0 (Success)
  */
 
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	int l;
 	int i;
