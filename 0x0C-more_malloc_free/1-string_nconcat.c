@@ -1,52 +1,51 @@
+#include "holberton.h"
 #include <stdio.h>
-#include "main.h"
-#include <string.h>
 #include <stdlib.h>
 
 /**
  * string_nconcat - Entry point
- *
- * Description: 'the program's description'
- * @s1: input
- * @s2:input
- * @n: input
- *
- * Return: Always  0 (Success)
+ *@s1: string 1
+ *@s2: string 2
+ *@n: number of bytes
+ * Return: pointer should point to a newly allocated space in memory or NULL
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len2;
-	unsigned int s2_len = strlen(s2), s1_len = strlen(s1);
-	char *omar;
+	char *strnew = NULL;
+	unsigned int i, n1, n2, j, count, palabras;
 
+	count = 0;
+	palabras = 0;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (n >= s2_len)
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	if (n >= n2)
 	{
-		len2 = s2_len;
-	}
-	else
+		palabras = n2;
+
+	} else
 	{
-		len2 = n;
+		for (n2 = 0; n2 < n; n2++)
+			palabras++;
 	}
-	omar = (char *)malloc((len2 + s1_len + 1) * sizeof(char));
-	if (omar == NULL)
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
 		return (NULL);
 	}
-		int i;
-	for (i = 0; i < s1_len; i++)
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (j = 0; j < palabras; i++)
 	{
-		omar[i] = s1[i];
+		strnew[i] = s2[count];
+		count++;
+		j++;
 	}
-	for (unsigned int j = 0; j < len2; j++)
-	{
-		omar[i] = s2[j];
-		i++;
-	}
-	omar[i] = '\0';
-	return (omar);
+	strnew[i] = '\0';
+	return (strnew);
 }
