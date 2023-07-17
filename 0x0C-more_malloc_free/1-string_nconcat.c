@@ -50,4 +50,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	omar[i] = '\0';
 	return (omar);
 }
-}
