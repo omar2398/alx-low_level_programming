@@ -11,7 +11,7 @@
  * @s2:input
  * @n: input
  *
- * Return: Always 0 (Success)
+ * Return: Always  0 (Success)
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
