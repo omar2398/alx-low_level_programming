@@ -22,9 +22,9 @@ int *array_range(int min, int max)
 	}
 	else
 	{
-	for (i = 0; i < ((max - min) + 1); i++)
+	for (i = min; i <= max; i++)
 	{
-		omar[i] = min++;
+		omar[i] = i;
 	}
 	return (omar);
 	}
