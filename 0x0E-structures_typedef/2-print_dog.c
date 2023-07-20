@@ -1,18 +1,19 @@
-#include <stdio.h>
 #include "dog.h"
+#include <stdio.h>
 
 /**
- * print_dog - print atributes of dog struct
- *@d:dog struct
- * Return: no return
+ * print_dog - Entry point
+ * @d:input
+ * Description: 'the program's description'
+ * Return: Always 0 (Success)
  */
+
 void print_dog(struct dog *d)
 {
-	if (d != NULL)
+	if (d)
 	{
-		printf("Name: %s\nAge: %f\nOwner: %s\n",
-		       d->name == NULL ? "(nil)" : d->name,
-		       d->age,
-		       d->owner == NULL ? "(nil)" : d->owner);
+		printf("Name: %s\n", (d->name) ? d->name : "(nil)");
+		printf("Age: %f\n", (d->age));
+		printf("Owner: %s\n", (d->owner) ? d->owner : "(nil)");
 	}
 }
