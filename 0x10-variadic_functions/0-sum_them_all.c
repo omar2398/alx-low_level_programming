@@ -17,6 +17,8 @@ int sum_them_all(const unsigned int n, ...)
 	va_list omar;
 
 	va_start(omar, n);
+	if (n == 0)
+		return (0);
 
 	for (i = 0; i < n; i++)
 	{
