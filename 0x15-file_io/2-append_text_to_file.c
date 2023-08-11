@@ -32,7 +32,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (om == -1)
 		return (-1);
 	mo = write(om, text_content, counter);
-	if (mo == NULL)
+	if (mo == -1)
 		return (-1);
 	close(om);
 	free(buffer);
