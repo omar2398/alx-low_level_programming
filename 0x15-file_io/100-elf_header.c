@@ -11,7 +11,7 @@
  * main - copy the content of a file to another file.
  * @argc: number of arguments.
  * @argv: arguments
- * Return: 0 on sucess
+ * Return: 0 o n sucess
  */
 int main(int argc, char *argv[])
 {
