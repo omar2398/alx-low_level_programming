@@ -13,26 +13,24 @@
  * @letters: number of letters to print
  * Return: the number or letters
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-
-	int fd, sz;
-	char *buf;
+	int om, mo;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
-	buf = malloc(letters * sizeof(char));
-	if (buf == NULL)
+	buffer = malloc(letters * sizeof(char));
+	if (buffer == NULL)
 		return (0);
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	om = open(filename, O_RDONLY);
+	if (om == -1)
 		return (0);
-	sz = write(STDOUT_FILENO, buf, read(fd, buf, letters));
-	if (sz == -1)
+	mo = write(STDOUT_FILENO, buffer, read(om, buffer, letters));
+	if (mo == -1)
 		return (0);
-	close(fd);
-	free(buf);
-	return (sz);
-
-
+	close(om);
+	free(buffer);
+	return (mo);
 }
